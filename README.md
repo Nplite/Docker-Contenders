@@ -12,7 +12,7 @@
 
 ```docker pull namdeopatil/opencv-cuda:latest```
 
-### Run the Docker Container Use the docker run command to start a containe
+### Run the Docker Container Use the docker run command to start a container
 
 ```docker run -it --rm namdeopatil/opencv-cuda:latest```
 
@@ -35,4 +35,19 @@ OR
 ```
 
 
+
+
+## if you facing error of core abort, lets try this:
 ```
+1. xhost +local:docker
+2. docker run --gpus all -it --rm \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=$DISPLAY \
+    -v /home/ai/Desktop/CUDA_CAMERAS:/workspace \
+    namdeopatil/opencv-cuda:latest
+
+3. echo $DISPLAY
+4. cd /workspace
+5. python3 test_cuda.py
+```
+
