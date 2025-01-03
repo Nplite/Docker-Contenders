@@ -35,8 +35,6 @@ OR
 ```
 
 
-
-
 ## if you facing error of core abort, lets try this:
 ```
 1. xhost +local:docker
@@ -50,4 +48,14 @@ OR
 4. cd /workspace
 5. python3 test_cuda.py
 ```
+
+for YOLO detection required some dependencies:
+```
+apt install python3 pip
+pip install numpy==1.23.5
+pip install ultralytics
+pip install cupy-cuda12x
+python updated.py
+```
+
 
