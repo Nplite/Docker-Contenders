@@ -21,4 +21,16 @@
 
 
 ### Run with GPU Support (If CUDA is Required) If the image uses CUDA, ensure you have NVIDIA Docker installed and run it with GPU support
-```docker run --gpus all -it --rm namdeopatil/opencv-cuda:latest```
+```docker run --gpus all -it --rm namdeopatil/opencv-cuda:latest
+
+OR
+
+1. docker run --gpus all -it --rm \
+    -v /home/ai/Desktop/CUDA_CAMERAS:/workspace \
+    namdeopatil/opencv-cuda:latest
+
+2. cd /workspace
+3. python3 your_file.py
+
+
+```
