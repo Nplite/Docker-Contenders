@@ -8,13 +8,15 @@
 4. docker push namdeopatil/opencv-cuda:latest
 ```
 
-## Running the Docker Image Locally
-```
-1. docker pull namdeopatil/opencv-cuda:latest
-2. docker run -it --rm namdeopatil/opencv-cuda:latest
-```
+## Pull the Image (Optional) If you're running it on a different machine, pull the image first
 
-## Run with Mounting Volumes
+```docker pull namdeopatil/opencv-cuda:latest```
+
+## Run the Docker Container Use the docker run command to start a containe
+
+```docker run -it --rm namdeopatil/opencv-cuda:latest```
+
+## Run with Mounting Volumes (If Needed) If you need to access files from your host machine, use the -v flag
 ``` docker run -it --rm -v /path/to/local/dir:/path/in/container namdeopatil/opencv-cuda:latest```
 
 
