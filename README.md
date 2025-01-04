@@ -1,6 +1,7 @@
 # Docker-Contenders
 
 ## Opencv CUDA Docker cammands
+
 ```
 1. docker build -t opencv-cuda-latest .
 2. docker login
@@ -35,14 +36,15 @@ OR
 ```
 
 
-## if you facing error of core abort, lets try this:
+## if you facing error of core abort, lets try this
+
 ```
 1. xhost +local:docker
 2. docker run --gpus all -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
     -v /home/ai/Desktop/CUDA_CAMERAS:/workspace \
-    namdeopatil/opencv-cuda:latest
+    namdeopatil/opencv-cuda-v1:latest
 
 3. echo $DISPLAY
 4. cd /workspace
@@ -50,6 +52,7 @@ OR
 ```
 
 for YOLO detection required some dependencies:
+
 ```
 apt install python3 pip
 pip install numpy==1.23.5
@@ -57,5 +60,3 @@ pip install ultralytics
 pip install cupy-cuda12x
 python updated.py
 ```
-
-
